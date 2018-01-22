@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="indoormapapi-release-">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/1839bd6a5265ccd66e2ee4c34783b8758e767027/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/1839bd6a5265ccd66e2ee4c34783b8758e767027/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/1839bd6a5265ccd66e2ee4c34783b8758e767027/output/jars/libs/commons-lang3-3.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

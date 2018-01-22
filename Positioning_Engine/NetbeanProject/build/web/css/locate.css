@@ -1,0 +1,37 @@
+/* 
+    Created on : Mar 7, 2015, 4:54:16 PM
+    Author     : Jiuzhou
+*/
+
+pre1{ white-space: pre ; display: block; unicode-bidi: embed }
+#center  {  
+    width:50%;
+    text-align: center;
+    margin: 0 auto; 
+}
+#background {
+    display: none;
+}
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+.v-align {
+    float: none;
+    display: inline-block !important;
+    vertical-align: middle;
+}
+
+.parent{
+    display:table;
+    width:100%;
+    
+}
+.child{
+    display:table-cell;
+    vertical-align:middle;
+    text-align : center;  
+}

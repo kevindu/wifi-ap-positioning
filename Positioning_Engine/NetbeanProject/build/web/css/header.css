@@ -1,0 +1,69 @@
+/* 
+    Created on : Mar 8, 2015, 5:33:33 PM
+    Author     : Jiuzhou
+*/
+
+#nav {
+	width: 100%;
+	float: left;
+	margin: 0 0 1em 0;
+	padding: 0;
+	background-color: #222222;
+	border-bottom: 1px solid #ccc;  }
+#nav ul {
+	list-style: none;
+	width: 800px;
+	margin: 0 auto;
+	padding: 0; }
+#nav li {
+	float: left; }
+#nav li a {
+	display: block;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #069;
+	border-right: 1px solid #ccc; }
+#nav li:first-child a {
+	border-left: 1px solid #ccc; }
+#nav li a:hover {
+	color: #c00;
+	background-color: #fff; }
+
+
+h1{
+    padding:0;
+    margin:0;
+}
+
+#nav1{
+width:50%;
+list-style:none;
+margin:0;
+padding:0;
+text-align:center;
+
+}
+
+#nav1 li{
+background:#336699;
+display:inline-block;
+width:49%;
+}
+
+#nav1 li a{
+width:100%;
+text-decoration: none;
+padding-top:10px;
+padding-bottom:10px;
+display:inline-block;
+border-left: 3px solid #ccc;
+font-weight: bold;
+color:white; 
+font-family: "verdana";
+}
+
+#nav1 li a:hover {
+color: white;
+background-color: #FF9900;
+}

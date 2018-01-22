@@ -1,0 +1,33 @@
+
+.table-responsive {
+    width:60%;
+    margin: 0 auto; 
+}
+
+.container .table-responsive {
+    width:100%;
+    margin: 0 auto; 
+}
+
+td  {
+    padding: 15px;
+    text-align: left;
+}
+
+table2  {
+    border-collapse: collapse;
+    border: 1px solid black;
+    width:50%;
+    table-layout: fixed;
+    margin: 0 auto; 
+}
+table2.td  {
+    border: 1px solid black;
+    padding: 15px;
+}
+table2.thead{
+    color : floralwhite;
+    font-family: "verdana";
+    background-color : #5B4947; 
+    font-size: 20px;
+}
