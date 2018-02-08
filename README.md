@@ -1,5 +1,7 @@
 # WiFi AP-centred Positioning
-Indoor positioning systems have gained a lot of attention in the last few years. With the introduction of the Internet of Things (IoT) paradigm the knowledge of user's location has become a crucial information to deliver efficient and tailored Location Based Services (LBS), especially in indoor environments. Here we propose an AP (Access Point)-centred indoor positioning system that overcomes common limitations presented in conventional positioning systems, such as an excessive involvement of Mobile Devices (MDs). Our work merges ideas originally proposed in [1] and [2] to build an efficient, accurate and smart Probabilistic-FingerPrint (P-FP) algorithm that avoids the MD involvement and considers the signal strength measurements as a random variable in the positioning process. Numerical results, obtained in a real-world deployment, show better performance on positioning accuracy, energy consumption and latency with respect to the MD-based architecture.
+Indoor positioning systems have gained a lot of attention in the last few years. With the introduction of the Internet of Things (IoT) paradigm the knowledge of user's location has become a crucial information to deliver efficient and tailored Location Based Services (LBS), especially in indoor environments. 
+
+Here we propose an AP (Access Point)-centred indoor positioning system that overcomes common limitations presented in conventional positioning systems, such as an excessive involvement of Mobile Devices (MDs). Our work merges ideas originally proposed in [1] and [2] to build an efficient, accurate and smart Probabilistic-FingerPrint (P-FP) algorithm that avoids the MD involvement and considers the signal strength measurements as a random variable in the positioning process. Numerical results, obtained in a real-world deployment, show better performance on positioning accuracy, energy consumption and latency with respect to the MD-based architecture.
 
 The related architecture and algorithms in this work are published and you can find more details in the following papers.
 1. X. Du, J. Wu, K. Yang and L. Wang, "An AP-Centred Indoor Positioning System Combining Fingerprint Technique," 2016 IEEE Global Communications Conference (GLOBECOM), Washington, DC, 2016, pp. 1-6.
@@ -18,10 +20,10 @@ The related architecture and algorithms in this work are published and you can f
 - All the components could communicate with each other.
 
 #### NTP server setup:
-'''
+```
 /etc/init.d/sysntpd restart
 ntpd -l
-'''
+```
 
 ### Compile the WiFi Sniffer
 Modify the antenna_index parameters in `WiFi_Sniffer/RssSniffer-SQL/src/RssSniffer-SQL.c` for different APs.
@@ -42,15 +44,18 @@ Add AP to the table access_points.
 
 ### Run the Fingerprint Collector
 Configure the database information and indoor map.
-    con = DriverManager.getConnection("jdbc:mysql://xxx:3306/myips", "xxx", "xxx");
-
+```
+con = DriverManager.getConnection("jdbc:mysql://host:3306/myips", "username", "password");
+```
 The RSS used by the Fingerprint Collector to build the fingerprint database in the training phase is the mobile device's RSS sensed by AP, i.e., RSS retrived from probe request frame by WiFi Sniffer, which is aligned with RSS detection mechanism in the positioning phase.
 
 If the probabilistic algorithm is applied, the RSSs collected in the mobile phone are saved into a text file, which is uploaded to the server where the Positioning Engine is running.
 
 ### Positioning Engine
 Configure the database information and indoor map.
-    con = DriverManager.getConnection("jdbc:mysql://xxx:3306/myips", "xxx", "xxx");
+```
+    con = DriverManager.getConnection("jdbc:mysql://host:3306/myips", "username", "password");
+```
 Generate the war package in IDE.
 Deploy tomcat7 server, deploy the war package under the directory of tomcat, which usually is /var/lib/tomcat7/webapps/.
 
@@ -69,8 +74,8 @@ Deploy tomcat7 server, deploy the war package under the directory of tomcat, whi
 
 如果AP无法连接到互联网的时钟服务器，建议在本地Wi-Fi网络中建立一个NTP时钟服务器。
 NTP server
-/etc/init.d/sysntpd restart
-ntpd -l
+    /etc/init.d/sysntpd restart
+    ntpd -l
 
 基于RabbitMQ的升级版：
     Wi-Fi嗅探程序不再直接连接数据库，通过RabbitMQ消息队列发送到服务器上面的一个JAVA接收程序，从而再保存到数据库中。
