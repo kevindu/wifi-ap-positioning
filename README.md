@@ -3,11 +3,11 @@ Indoor positioning systems have gained a lot of attention in the last few years.
 
 The related architecture and algorithms in this work are published and you can find more details in the following papers.
 
-[1] X. Du, J. Wu, K. Yang and L. Wang, "An AP-Centred Indoor Positioning System Combining Fingerprint Technique," 2016 IEEE Global Communications Conference (GLOBECOM), Washington, DC, 2016, pp. 1-6.
+1. X. Du, J. Wu, K. Yang and L. Wang, "An AP-Centred Indoor Positioning System Combining Fingerprint Technique," 2016 IEEE Global Communications Conference (GLOBECOM), Washington, DC, 2016, pp. 1-6.
 
-[2] Igor Bisio, Fabio Lavagetto, Mario Marchese, Andrea Sciarrone, "Smart probabilistic fingerprinting for WiFi-based indoor positioning with mobile devices", Pervasive and Mobile Computing, Available online 24 February 2016, ISSN 1574-1192
+2. Igor Bisio, Fabio Lavagetto, Mario Marchese, Andrea Sciarrone, "Smart probabilistic fingerprinting for WiFi-based indoor positioning with mobile devices", Pervasive and Mobile Computing, Available online 24 February 2016, ISSN 1574-1192
 
-[3] X. Du, K. Yang, I. Bisio, F. Lavagetto and A. Sciarrone, "An AP-centred Smart Probabilistic Fingerprint System for Indoor Positioning", 2018 IEEE International Conference on Communications (ICC), Kansa City, USA, 2018
+3. X. Du, K. Yang, I. Bisio, F. Lavagetto and A. Sciarrone, "An AP-centred Smart Probabilistic Fingerprint System for Indoor Positioning", 2018 IEEE International Conference on Communications (ICC), Kansa City, USA, 2018
 
 ## Components
 * WiFi Sniffer (C code) - running on WiFi AP
