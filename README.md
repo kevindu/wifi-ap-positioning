@@ -1,4 +1,8 @@
 # WiFi AP-centred Positioning
+The related architecture and algorithms in this work are published and you can find more details in the following papers.
+* X. Du, J. Wu, K. Yang and L. Wang, "An AP-Centred Indoor Positioning System Combining Fingerprint Technique," 2016 IEEE Global Communications Conference (GLOBECOM), Washington, DC, 2016, pp. 1-6.
+* Igor Bisio, Fabio Lavagetto, Mario Marchese, Andrea Sciarrone, "Smart probabilistic fingerprinting for WiFi-based indoor positioning with mobile devices", Pervasive and Mobile Computing, Available online 24 February 2016, ISSN 1574-1192
+* X. Du, K. Yang, I. Bisio, F. Lavagetto and A. Sciarrone, "An AP-centred Smart Probabilistic Fingerprint System for Indoor Positioning", 2018 IEEE International Conference on Communications (ICC), Kansa City, USA, 2018
 
 ## Components
 * WiFi Sniffer (C code) - running on WiFi AP
@@ -36,6 +40,10 @@ Add AP to the table access_points.
 
 ### Run the Fingerprint Collector
 Configure the database information and indoor map.
+
+The RSS used by the Fingerprint Collector to build the fingerprint database in the training phase is the mobile device's RSS sensed by AP, i.e., RSS retrived from probe request frame by WiFi Sniffer, which is aligned with RSS detection mechanism in the positioning phase.
+
+If the probabilistic algorithm is applied, the RSSs collected in the mobile phone are saved into a text file, which is uploaded to the server where the Positioning Engine is running.
 
 ### Positioning Engine
 Configure the database information and indoor map.
