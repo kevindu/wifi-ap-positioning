@@ -41,7 +41,7 @@ public class MyIPSDatabase {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             System.out.println("loaded class");
-            con = DriverManager.getConnection("jdbc:mysql://duxuan.space:3306/myips", "root", "Civic1.6s");
+            con = DriverManager.getConnection("jdbc:mysql://xxx:3306/myips", "xxx", "xxx");
             System.out.println("created con");
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Exception in MyIPSDatabase(): " + e);

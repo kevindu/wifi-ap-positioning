@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/xuandu/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        revision="25.0.0"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/xuandu/Google Drive/Devlopement/GenoaCollaboration/FingerprintCollectorGenoa/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/support-annotations-23.0.1-278ee7b1161feb9d0fb1626cad152d8cf515fba0.jar" />
+    </item>
+    <item
+        jar="/Users/xuandu/.android/build-cache/3cc172c8e4b84684650042ff46db7a7318b424ad/output/jars/classes.jar"
+        revision="25.0.0"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/xuandu/Google Drive/Devlopement/GenoaCollaboration/FingerprintCollectorGenoa/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-e2fd99001b4cc29cf41af7f533ad1f785170848f.jar" />
+    </item>
+    <item
+        jar="/Users/xuandu/Google Drive/Devlopement/GenoaCollaboration/FingerprintCollectorGenoa/lib-probabilisticpositioning/build/libs/lib-probabilisticpositioning.jar"
+        revision="25.0.0"
+        sha1="37d14ff3594538bcc5ee9dd3206df0b2122af19f">
+        <dex dex="/Users/xuandu/Google Drive/Devlopement/GenoaCollaboration/FingerprintCollectorGenoa/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/lib-probabilisticpositioning-8f820cea3a886275c0d8460dacda8c7991a7f0ef.jar" />
+    </item>
+    <item
+        jar="/Users/xuandu/Library/Android/sdk/platforms/android-24/optional/org.apache.http.legacy.jar"
+        revision="25.0.0"
+        sha1="fb7023e781abb70ed1b0442eb611fbed295cae84">
+        <dex dex="/Users/xuandu/Google Drive/Devlopement/GenoaCollaboration/FingerprintCollectorGenoa/app/build/intermediates/transforms/preJackRuntimeLibraries/debug/jars/8000/40/org.apache.http.legacy-e33b3b4c4047c759a44e391d2372db560c5b5f9b.jar" />
+    </item>
+    <item
+        jar="/Users/xuandu/Google Drive/Devlopement/GenoaCollaboration/FingerprintCollectorGenoa/app/libs/mysql-connector-java-3.0.17-ga-bin.jar"
+        revision="25.0.0"
+        sha1="3d8b493d12562fc904a947ea7b84394fe67e8a55">
+        <dex dex="/Users/xuandu/Google Drive/Devlopement/GenoaCollaboration/FingerprintCollectorGenoa/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/mysql-connector-java-3.0.17-ga-bin-b2b0a8cabb973621ef66a537fe626af7d630c823.jar" />
+    </item>
+    <item
+        jar="/Users/xuandu/Library/Android/sdk/platforms/android-24/android.jar"
+        revision="25.0.0"
+        sha1="d49cc0972df7adf495d3ad3d0cf71c0ec517ace4">
+        <dex dex="/Users/xuandu/Google Drive/Devlopement/GenoaCollaboration/FingerprintCollectorGenoa/app/build/intermediates/transforms/preJackRuntimeLibraries/debug/jars/8000/40/android-1f7c0fa8d17c2a196019418b5d0593d56b557cdb.jar" />
+    </item>
+    <item
+        jar="/Users/xuandu/.android/build-cache/d9f7cc63d6b4e61069632e66c1493e7ed20f6a81/output/jars/classes.jar"
+        revision="25.0.0"
+        sha1="bf21f6f9c982257079e653f454406fd565657985">
+        <dex dex="/Users/xuandu/Google Drive/Devlopement/GenoaCollaboration/FingerprintCollectorGenoa/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-42f36d80e2b855a59173e273d715bf34daf65df9.jar" />
+    </item>
+    <item
+        jar="/Users/xuandu/.android/build-cache/50bd0c1ce6770cd0b0d8522e1948c7f516b0ced2/output/jars/libs/internal_impl-23.0.1.jar"
+        revision="25.0.0"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/xuandu/Google Drive/Devlopement/GenoaCollaboration/FingerprintCollectorGenoa/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/internal_impl-23.0.1-95df99f43bae228135d4f8179a8f6942f37215ba.jar" />
+    </item>
+    <item
+        jar="/Users/xuandu/.android/build-cache/50bd0c1ce6770cd0b0d8522e1948c7f516b0ced2/output/jars/classes.jar"
+        revision="25.0.0"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/xuandu/Google Drive/Devlopement/GenoaCollaboration/FingerprintCollectorGenoa/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-4fb998bd0792da1bad96918a63bd20392e4af677.jar" />
+    </item>
+    <item
+        jar="/Users/xuandu/.android/build-cache/d9f7cc63d6b4e61069632e66c1493e7ed20f6a81/output/jars/libs/commons-lang3-3.1.jar"
+        revision="25.0.0"
+        sha1="3060f99e271b3631f882c657d1f08916e3e5a579">
+        <dex dex="/Users/xuandu/Google Drive/Devlopement/GenoaCollaboration/FingerprintCollectorGenoa/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/commons-lang3-3.1-9eec3f07a7932dac6ea7eb441ab96c3325634bb0.jar" />
+    </item>
+
+</items>

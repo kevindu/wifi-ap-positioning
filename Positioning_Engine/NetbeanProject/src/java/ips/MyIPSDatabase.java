@@ -18,27 +18,27 @@ public class MyIPSDatabase {
     public static HashMap<String, String> Locatables = new HashMap<String, String>();
     Connection con = null;
     static MyIPSDatabase singleton=null;
-    
+
     public static void main(String[] args) throws Exception {
-       
-       
+
+
         MyIPSDatabase db = new MyIPSDatabase();
-       
-      
+
+
     }
 
     public MyIPSDatabase() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             System.out.println("loaded class");
-            con = DriverManager.getConnection("jdbc:mysql://duxuan.space:3306/myips", "root", "Civic1.6s");
+            con = DriverManager.getConnection("jdbc:mysql://xxx:3306/myips", "xxx", "xxx");
             System.out.println("created con");
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Exception in MyIPSDatabase(): " + e);
         }
-        
+
     }
-    
+
      public static MyIPSDatabase getSingleton() {
         if (singleton == null) {
             singleton = new MyIPSDatabase();
@@ -51,8 +51,8 @@ public class MyIPSDatabase {
             Statement s = con.createStatement();
             String query = "SELECT model, mac_addr, lan_addr, ST_X(position) AS x, ST_Y(position) as y,lan_id from access_points";
             ResultSet rs = s.executeQuery(query);
-           
-           
+
+
             return rs;
         } catch (Exception e) {
             System.out.println("Exception in getAllAPs(): " + e);
@@ -64,17 +64,17 @@ public class MyIPSDatabase {
             Statement s = con.createStatement();
             String query = "Select id,ST_X(position) AS x, ST_Y(position) as y,ap2_1_rss,ap2_2_rss,ap2_3_rss,ap2_4_rss,ap2_5_rss,ap2_6_rss,ap2_7_rss,ap2_8_rss from fingerprints";
             ResultSet rs = s.executeQuery(query);
-           
-  
+
+
             return rs;
         } catch (Exception e) {
             System.out.println("Exception in getAllFingerprints(): " + e);
             return null;
         }
     }
-    
-    
-    
+
+
+
     public ResultSet getAllLocatableDevices2() {
         try {
             Statement s = con.createStatement();
@@ -90,7 +90,7 @@ public class MyIPSDatabase {
             return null;
         }
     }
-    
+
     public boolean isLocatable(String MAC) {
         try {
             Statement s = con.createStatement();
@@ -106,7 +106,7 @@ public class MyIPSDatabase {
             return false;
         }
     }
-  
+
 
     public ResultSet getAllFromTable(String tbl_name) {
         try {
@@ -119,7 +119,7 @@ public class MyIPSDatabase {
             return null;
         }
     }
-    
+
      public ResultSet getAllWiFiDevices() {
         try {
             Statement s = con.createStatement();
@@ -131,7 +131,7 @@ public class MyIPSDatabase {
             return null;
         }
     }
-     
+
     public int getNumofWiFiDevices() {
         try {
             Statement s = con.createStatement();
@@ -147,7 +147,7 @@ public class MyIPSDatabase {
             return 0;
         }
     }
-    
+
     public double getEuclideanDistance(int[] fingerprint, int[] measuredRSS) {
         double dist = 0.0;
         for (int i = 0; i < fingerprint.length; i++) {
@@ -155,7 +155,7 @@ public class MyIPSDatabase {
         }
         return Math.sqrt(dist);
     }
-    
+
     // get the RSS of the mobile device through device MAC address
        public int[] getRSSData2(String mac_addr) {
         int[] rss_data = {-100, -100, -100, -100, -100, -100, -100, -100};
@@ -206,7 +206,7 @@ public class MyIPSDatabase {
                     System.out.println("lan 8: " + rss_data[7]);
                 }
             }
-            
+
             return rss_data;
 
         } catch (Exception e) {
@@ -216,7 +216,7 @@ public class MyIPSDatabase {
 
     }
 
-    
+
     public Point KNN(int[] measuredRSS) {
         double distance;
         int[] fingerprint;
@@ -236,7 +236,7 @@ public class MyIPSDatabase {
                 int rss6 = rs.getInt("ap2_6_rss");
                 int rss7 = rs.getInt("ap2_7_rss");
                 int rss8 = rs.getInt("ap2_8_rss");
-                
+
                 int x = rs.getInt("x");
                 int y = rs.getInt("y");
                 fingerprint = new int[]{rss1, rss2, rss3, rss4, rss5, rss6,rss7, rss8};
@@ -245,11 +245,11 @@ public class MyIPSDatabase {
                 resultList.add(new Result(new Point(x, y), distance));
             }
 
-         
+
             Collections.sort(resultList, new ResultComparator());
-            
+
             System.out.println("dist: "+ resultList.get(0).euclidean_dist);
-                
+
             if (resultList.get(0).euclidean_dist <= 200) {//30
                 return resultList.get(0).position;
             } else {
@@ -260,7 +260,7 @@ public class MyIPSDatabase {
             return null;
         }
     }
-   
+
     public int getNumofRowsInTable(String tbl_name) {
         try {
             Statement s = con.createStatement();
@@ -313,7 +313,7 @@ public class MyIPSDatabase {
 
         }
     }
-    
+
     public void saveData(int x1, int y1, int x2, int y2) throws SQLException {
         PreparedStatement pre_statement = null;
 
@@ -339,7 +339,7 @@ public class MyIPSDatabase {
             if (pre_statement != null) {
                 pre_statement.close();
             }
-        
+
         }
     }
 }

@@ -1,0 +1,209 @@
+package com.tilab.ca.android.lcb.arraysManager;
+
+import java.util.ArrayList;
+
+import com.tilab.ca.android.lcb.wifidata.SingleElementFPlist;
+import com.tilab.ca.android.lcb.wifidata.WifiDataContainer;
+
+public class ArrayManager {
+	
+	/**
+	 * Calcola il massimo di un array di double
+	 * @param arr
+	 * @return
+	 */
+	public static double max(double[] arr)
+	{
+		double maximum = arr[0];   // start with the first value
+	    for (int i=0; i<arr.length; i++) {
+	        if (arr[i] > maximum) {
+	            maximum = arr[i];   // new maximum
+	        }
+	    }
+	    return maximum;
+	}
+	
+	/**
+	 * Calcola il massimo di un array di int
+	 * @param arr
+	 * @return
+	 */
+	public static int max(int[] arr)
+	{
+		int maximum = arr[0];   // start with the first value
+	    for (int i=0; i<arr.length; i++) {
+	        if (arr[i] > maximum) {
+	            maximum = arr[i];   // new maximum
+	        }
+	    }
+	    return maximum;
+	}
+	
+	/**
+	 * Calcola la media di un array di double
+	 * @param arr
+	 * @return
+	 */
+	public static double mean(double[] arr)
+	{
+		double mean = 0;  
+		for (int i=0; i<arr.length; i++)
+		   	{mean = mean + arr[i];}
+		return (mean / (arr.length));
+	}
+	
+
+	public static int[] FindIndexPreOrder(int[] OriginalArr , Integer[] DescendentArr)
+	{
+		int [] index = new int[DescendentArr.length];
+		
+		for (int i=0; i<DescendentArr.length; i++){
+			index[i] = FindElementInArray(OriginalArr, DescendentArr[i]);
+			OriginalArr[index[i]] = Integer.MAX_VALUE; //Lo sostituisco in modo che non possa piu essere contato 
+		}
+		return index;
+	}
+	
+	public static ArrayList<Integer> FindOccurenciesIntoArray(int[] arr , int value)
+	{
+		ArrayList<Integer> occ = new ArrayList<Integer>();
+		
+		while(true)
+		{
+			int index = FindElementInArray(arr, value);
+			if (index != -1){
+				occ.add(index);
+				arr[index] = Integer.MAX_VALUE;
+			}
+			
+			else {break;}
+		}
+		
+		if (occ.size() == 0){
+			return null;}
+		
+		return occ;
+	}
+	
+	public static int FindNumberOfOccurenciesIntoArray(int[] arr , int value)
+	{
+		int occ = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] == value) {occ++;}
+		}
+		return occ;
+	}
+	
+	public static int FindNumberOfOccurenciesIntoArray(Integer[] arr , int value)
+	{
+		int occ = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] == value) {occ++;}
+		}
+		return occ;
+	}
+	
+	public static int FindElementInArray(int[] arr , int element)
+	{
+		int index = -1;
+		
+		for (int i=0; i<arr.length; i++)
+		{
+			if(arr[i] == element){
+				index = i;}
+		}
+		return index;
+	}
+	
+	public static ArrayList<Integer> FindElementInArrayAboveThr(double[] arr , double thr)
+	{
+		ArrayList<Integer> dec = new ArrayList<Integer>();
+		
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] >= thr)
+				dec.add(i);
+		}
+		return dec;
+	}
+	
+	public static int FindElementInArray(double[] arr , double element)
+	{
+		int index = -1;
+		
+		for (int i=0; i<arr.length; i++)
+		{
+			if(arr[i] == element){
+				index = i;}
+		}
+		return index;
+	}
+	
+	public static int IsElementPresent (String name , WifiDataContainer data)
+	{
+		int index = -1;
+    	
+    	for (int i = 0; i < data.getSize(); i++) {
+    		if (name.compareTo(data.getMacAddrArray()[i]) == 0) //COINCIDONO!
+    		{
+    			index = i;    			
+    		}
+    	}
+    	return index;
+	}
+	
+	public static int[] FindIndexPreOrder(Double[] OriginalArr , Double[] DescendentArr)
+	{
+		//Lo copio in modo da non modificare OriginalArr
+		Double[] app = new Double[OriginalArr.length];
+		for (int i = 0; i < app.length; i++) {
+			app[i] = OriginalArr[i];
+		}
+		
+		
+		
+		int [] index = new int[DescendentArr.length];
+		
+		for (int i=0; i<DescendentArr.length; i++){
+			index[i] = FindElementInArray(app, DescendentArr[i]);
+			app[index[i]] = Double.MAX_VALUE; //Lo sostituisco in modo che non possa piu essere contato 
+		}
+		return index;
+	}
+	
+	public static int FindElementInArray(Double[] arr , double element)
+	{
+		int index = -1;
+		
+		for (int i=0; i<arr.length; i++)
+		{
+			if(arr[i] == element){
+				index = i;}
+		}
+		return index;
+	}
+	
+	/**
+	 * Controllo se il singolo AP è stato o meno già inserito nella lista.
+	    Index vale:
+	 * l'indice dell'AP nella lista, se esso fosse già stato inserito
+	 * -1 se l'AP non fosse presente
+	 * @param AP
+	 * @param List
+	 * @return
+	 */
+	public static int IsPresent(String name , ArrayList<SingleElementFPlist> List)
+	{
+		int index = -1;
+
+		for (int i = 0; i < List.size(); i++) {
+			if (name.compareTo(List.get(i).getAPmac()) == 0) //COINCIDONO!
+			{
+				index = i;    			
+			}
+		}
+		return index;
+	}
+	
+	
+
+}

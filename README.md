@@ -42,6 +42,7 @@ Add AP to the table access_points.
 
 ### Run the Fingerprint Collector
 Configure the database information and indoor map.
+    con = DriverManager.getConnection("jdbc:mysql://xxx:3306/myips", "xxx", "xxx");
 
 The RSS used by the Fingerprint Collector to build the fingerprint database in the training phase is the mobile device's RSS sensed by AP, i.e., RSS retrived from probe request frame by WiFi Sniffer, which is aligned with RSS detection mechanism in the positioning phase.
 
@@ -49,6 +50,7 @@ If the probabilistic algorithm is applied, the RSSs collected in the mobile phon
 
 ### Positioning Engine
 Configure the database information and indoor map.
+    con = DriverManager.getConnection("jdbc:mysql://xxx:3306/myips", "xxx", "xxx");
 Generate the war package in IDE.
 Deploy tomcat7 server, deploy the war package under the directory of tomcat, which usually is /var/lib/tomcat7/webapps/.
 
