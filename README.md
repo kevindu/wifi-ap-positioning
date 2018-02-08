@@ -54,7 +54,7 @@ If the probabilistic algorithm is applied, the RSSs collected in the mobile phon
 ### Positioning Engine
 Configure the database information and indoor map.
 ```
-    con = DriverManager.getConnection("jdbc:mysql://host:3306/myips", "username", "password");
+con = DriverManager.getConnection("jdbc:mysql://host:3306/myips", "username", "password");
 ```
 Generate the war package in IDE.
 Deploy tomcat7 server, deploy the war package under the directory of tomcat, which usually is /var/lib/tomcat7/webapps/.
