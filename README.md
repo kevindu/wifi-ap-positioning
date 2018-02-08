@@ -1,8 +1,13 @@
 # WiFi AP-centred Positioning
+Indoor positioning systems have gained a lot of attention in the last few years. With the introduction of the Internet of Things (IoT) paradigm the knowledge of user's location has become a crucial information to deliver efficient and tailored Location Based Services (LBS), especially in indoor environments. Here we propose an AP (Access Point)-centred indoor positioning system that overcomes common limitations presented in conventional positioning systems, such as an excessive involvement of Mobile Devices (MDs). Our work merges ideas originally proposed in [1] and [2] to build an efficient, accurate and smart Probabilistic-FingerPrint (P-FP) algorithm that avoids the MD involvement and considers the signal strength measurements as a random variable in the positioning process. Numerical results, obtained in a real-world deployment, show better performance on positioning accuracy, energy consumption and latency with respect to the MD-based architecture.
+
 The related architecture and algorithms in this work are published and you can find more details in the following papers.
-* X. Du, J. Wu, K. Yang and L. Wang, "An AP-Centred Indoor Positioning System Combining Fingerprint Technique," 2016 IEEE Global Communications Conference (GLOBECOM), Washington, DC, 2016, pp. 1-6.
-* Igor Bisio, Fabio Lavagetto, Mario Marchese, Andrea Sciarrone, "Smart probabilistic fingerprinting for WiFi-based indoor positioning with mobile devices", Pervasive and Mobile Computing, Available online 24 February 2016, ISSN 1574-1192
-* X. Du, K. Yang, I. Bisio, F. Lavagetto and A. Sciarrone, "An AP-centred Smart Probabilistic Fingerprint System for Indoor Positioning", 2018 IEEE International Conference on Communications (ICC), Kansa City, USA, 2018
+
+[1] X. Du, J. Wu, K. Yang and L. Wang, "An AP-Centred Indoor Positioning System Combining Fingerprint Technique," 2016 IEEE Global Communications Conference (GLOBECOM), Washington, DC, 2016, pp. 1-6.
+
+[2] Igor Bisio, Fabio Lavagetto, Mario Marchese, Andrea Sciarrone, "Smart probabilistic fingerprinting for WiFi-based indoor positioning with mobile devices", Pervasive and Mobile Computing, Available online 24 February 2016, ISSN 1574-1192
+
+[3] X. Du, K. Yang, I. Bisio, F. Lavagetto and A. Sciarrone, "An AP-centred Smart Probabilistic Fingerprint System for Indoor Positioning", 2018 IEEE International Conference on Communications (ICC), Kansa City, USA, 2018
 
 ## Components
 * WiFi Sniffer (C code) - running on WiFi AP
