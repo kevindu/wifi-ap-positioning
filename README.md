@@ -59,6 +59,10 @@ con = DriverManager.getConnection("jdbc:mysql://host:3306/myips", "username", "p
 Generate the war package in IDE.
 Deploy tomcat7 server, deploy the war package under the directory of tomcat, which usually is /var/lib/tomcat7/webapps/.
 
+## Implementation Notes
+### MH-based Positioning
+In the implementation on Android platform, the information about surrounding detected APs are acquired by android.net.wifi.ScanResult class from WiFi service of Android. Each ScanResult is binding to a specific AP. From Android API level 17, the timestamp when the ScanResult was last seen is added to the ScanResult, which enables more fine
+tuning of RSS observations. In our work the timestamp is always checked to ensure the RSS observed is latest or can be mapped to previous location based on moving trajectory. In addition, the frequency to obtain the latest ScanResult is not controlled by user while depending on performance of WiFi card. In our system implementation, a BroadcastReceiver is listening on the ScanResultsAvailableAction of WifiManager to receive the ScanResults.
 
 ## 中文文档/Docs in Chinese
 
